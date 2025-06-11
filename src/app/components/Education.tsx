@@ -1,6 +1,16 @@
+"use client";
+import { motion } from "framer-motion";
+
 const Education = () => {
   return (
-    <section className="px-6 py-10 bg-gray-100 text-gray-800">
+    <motion.section
+      id="education"
+      className="px-6 py-10 bg-orange-100 dark:bg-orange-800 text-black dark:text-white"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
       <h2 className="text-3xl font-bold mb-6 text-center">Education</h2>
       <div className="max-w-3xl mx-auto space-y-4">
         <div>
@@ -16,7 +26,7 @@ const Education = () => {
           <p>Class X — 86.5%</p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

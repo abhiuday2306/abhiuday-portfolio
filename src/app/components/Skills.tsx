@@ -1,15 +1,24 @@
+"use client";
+import { motion } from "framer-motion";
+
 const Skills = () => {
   return (
-    <section className="px-6 py-10 bg-white text-gray-800">
-      <h2 className="text-3xl font-bold mb-6 text-center">Technical Skills</h2>
+    <motion.section
+      id="skills"
+      className="px-6 py-10 bg-gradient-to-r from-pink-100 to-white dark:from-pink-900 dark:to-black"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
       <ul className="max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
-        <li>C, C++, Python, JavaScript, SQL, Java</li>
-        <li>HTML, CSS, Tailwind, React</li>
-        <li>Next.js, Django, Node.js</li>
-        <li>MongoDB, Git, GitHub, VS Code</li>
-        <li>DSA, OOP, DBMS, OS</li>
+        <li>C, C++, Python, JavaScript, Java</li>
+        <li>React, Next.js, Django, Node.js</li>
+        <li>MongoDB, SQL, Tailwind, Git</li>
+        <li>VS Code, GitHub, DSA, OOP</li>
       </ul>
-    </section>
+    </motion.section>
   );
 };
 
